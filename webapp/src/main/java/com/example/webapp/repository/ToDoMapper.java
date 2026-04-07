@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Param;
 import com.example.webapp.entity.ToDo;
 
 @Mapper
-public interface TodoMapper {
+public interface ToDoMapper {
   /**
    * 全てのすることを取得します
    */
