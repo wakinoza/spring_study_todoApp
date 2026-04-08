@@ -12,7 +12,7 @@ public interface ToDoService {
    * 
    * @return
    */
-  List<ToDo> findAttToDo();
+  List<ToDo> findAllToDo();
 
   /**
    * 指定されたIDのすることを検索します
