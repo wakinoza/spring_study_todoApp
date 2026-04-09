@@ -30,7 +30,7 @@ public class ToDo {
   /**
    * 作成日時
    */
-  private LocalDateTime cretedAt;
+  private LocalDateTime createdAt;
 
   /**
    * 更新日時
