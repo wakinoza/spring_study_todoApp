@@ -22,14 +22,12 @@
 		<tr>
 			<th>登録日時</th>
 			<td th:text="${todo.createdAt.format(T(java.time.format.DateTimeFormatter).ofPattern('yyyy/MM/dd HH:mm:ss'))}">
-				
-			</td>}
+			</td>
 		</tr>
 		<tr>
 			<th>更新日時</th>
 			<td th:text="${todo.updatedAt.format(T(java.time.format.DateTimeFormatter).ofPattern('yyyy/MM/dd HH:mm:ss'))}">
-				
-			</td>}
+			</td>
 		</tr>
 	</table>
   <a th:href="@{/todos}">ToDo一覧</a>
