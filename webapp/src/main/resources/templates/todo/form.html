@@ -5,16 +5,16 @@
 <title>ToDoフォーム</title>
 </head>
 <body>
-	<h2 th:if="&{toDoForm.isNew}">新規ToDo登録</h2>
-	<h2 th:unless="&{toDoForm.isNew}">ToDo編集</h2>
+	<h2 th:if="${toDoForm.isNew}">新規ToDo登録</h2>
+	<h2 th:unless="${toDoForm.isNew}">ToDo編集</h2>
 	<form th:action="${toDoForm.isNew} ? @{/todos/save} : @{/todos/update}"
-	  th:obkect="${toDoForm}" method="post">
+	  th:object="${toDoForm}" method="post">
 	  <input type="hidden" th:field="*{id}">
 	  <table>
 		<tr>
 			<th>ToDo</th>
 			<td>
-				<input type="text" th:fiel="*{todo">
+				<input type="text" th:field="*{todo}">
 			</td>
 		</tr>
 		<tr>

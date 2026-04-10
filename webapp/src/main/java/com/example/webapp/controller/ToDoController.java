@@ -66,7 +66,7 @@ public class ToDoController {
     ToDo ToDo = ToDoHelper.convertToDo(form);
     toDoService.insertToDo(ToDo);
     attributes.addFlashAttribute("message", "新しいToDoが作成されました");
-    return "rediect:/todos";
+    return "redirect:/todos";
   }
 
 

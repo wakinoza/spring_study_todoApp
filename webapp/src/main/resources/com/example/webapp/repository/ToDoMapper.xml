@@ -8,7 +8,7 @@
   
   <!--  1件検索-->
   <select id="selectById" resultType="com.example.webapp.entity.ToDo">
-    SELECT id, todo, detail, created_at as createdAt, updated_at as updatedAt FROM todos WHERE id = #{id}
+    SELECT id, todo, detail, created_at as createdAt, updated_at as updatedAt FROM todos WHERE id=#{id}
   </select>
   
   <!--  登録-->
@@ -18,12 +18,12 @@
   </insert>
   
   <!--  更新-->
-  <update id="updaate">
-    UPDATE todos SET todo=#{todo}, detail=#{detail}, updated_at=CURRENT_TIMESTAMP WHERE id = #{id};
+  <update id="update">
+    UPDATE todos SET todo=#{todo}, detail=#{detail}, updated_at=CURRENT_TIMESTAMP WHERE id=#{id};
   </update>
   
   <!--  削除-->
   <delete id="delete">
-    DELETE FROM todos WHERE id = #{id};
+    DELETE FROM todos WHERE id=#{id};
   </delete>
 </mapper>
