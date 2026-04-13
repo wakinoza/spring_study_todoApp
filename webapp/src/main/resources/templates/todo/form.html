@@ -15,6 +15,9 @@
 			<th>ToDo</th>
 			<td>
 				<input type="text" th:field="*{todo}">
+				<span th:if="${#fields.hasError('todo')}" th:errors="*{todo}" style="color : red;">
+						エラーがあれば表示
+				</span>
 			</td>
 		</tr>
 		<tr>
@@ -22,6 +25,9 @@
 			<td>
 				<textarea rows="5" cols="30" th:field="*{detail}">
 				</textarea>	
+				<span th:if="${#fields.hasError('detail')}" th:errors="*{detail}" style="color : red;">
+						エラーがあれば表示
+				</span>
 			</td>
 		</tr>
 		<input th:if="${toDoForm.isNew}" type="submit" value="登録">
