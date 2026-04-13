@@ -99,6 +99,16 @@ public class ToDoController {
 
   }
 
+  /**
+   * 指定されたIDのすることを削除します
+   */
+  @PostMapping("/delete/{id}")
+  public String delete(@PathVariable Integer id, RedirectAttributes attributes) {
+    toDoService.deleteToDo(id);
+    attributes.addFlashAttribute("message", "ToDoが削除されました");
+    return "redirect:/todos";
+  }
+
 
 
 }
