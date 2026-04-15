@@ -8,5 +8,9 @@
   <h2>メニュー画面</h2>
   <hr>
   <a th:href="@{/todos}">ToDo一覧</a>
+  <br>
+  <form th:action="@{/logout}" method="post">
+	<input type="submit" value="ログアウト">
+  </form>
 </body>
 </html>
